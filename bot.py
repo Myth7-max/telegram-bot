@@ -1,6 +1,7 @@
 from telegram.ext import Updater, CommandHandler
 
-TOKEN = "8126503625:AAFFadnlbCfF2nCnUylor27DM0CxU0Es26I"
+import os
+TOKEN = os.getenv("TOKEN")
 
 def start(update, context):
     update.message.reply_text("Hello 👋 Bot is working!")
